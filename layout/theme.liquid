@@ -5,7 +5,10 @@
   
   <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png" />
   {{ '_base.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'layout-changes.css' | asset_url | stylesheet_tag }}
+  {{ 'animate.min.css' | asset_url | stylesheet_tag }}
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+
   
   {{ '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js' | script_tag }}
   {{ 'jquery.min.js' | asset_url | script_tag }}
@@ -41,20 +44,21 @@
 <!--[if IE]><body class="{% include '__body-classes' %} ie"> <![endif]-->
 <!--[if !(IE)]><!--> <body class="{% include '__body-classes' %}"> <!--<![endif]-->
 
-  <div id="wrap">
+  <div id="wrap" id="srollr-body">
     {% include 'navbar' with 'top' %}
     <div id="content">
-      {% if settings.logo-placement == "above-main-content" %}{% include 'brand' %}{% endif %}
     	{% if has_main_menu %}
     	<div class="container">
     		{% include 'navbar' with 'main' %}
     	</div>
     	{% endif %}
-      {% if settings.slider-width == "window-width" and template == "index" %}{% include 'slider' %}{% elsif settings.slider-width == "window-width" %}{% include 'banner' %}{% endif %}
+
+      {% if settings.slider-width == "window-width" and template == "index" %}{% include 'slider' %}{% include 'brand' %}{% elsif settings.slider-width == "window-width" %}{% include 'banner' %}{% endif %}
       
       {% if settings.slider-width != "window-width" or settings.show-breadcrumbs %}
-      <div class="container">
+      <div class="container" id="main">
         {% if settings.slider-width == "site-width" and template == "index" %}{% include 'slider' %}{% elsif settings.slider-width == "site-width" %}{% include 'banner' %}{% endif %}
+        
         {% if settings.show-breadcrumbs and template != 'index' %}{% include 'breadcrumbs' %}{% endif %}
       </div>
       {% endif %}
@@ -94,6 +98,7 @@
   {{ 'popover.js' | asset_url | script_tag }}
   {{ 'typeahead.js' | asset_url | script_tag }}
   {{ 'jquery.instagram.min.js' | asset_url | script_tag }}
+  {{ 'skrollr.min.js' | asset_url | script_tag }}
   {% if settings.enable-image-zoom %}{{ 'jquery.zoom.min.js' | asset_url | script_tag }}{% endif %}
   {% if settings.enable-image-lightbox %}{{ 'jquery.colorbox-min.js' | asset_url | script_tag }}{% endif %}
   {% if settings.enable-age-verification %}{% include 'age-check' %}{% endif %}
@@ -155,6 +160,9 @@
 	{% if settings.ajax-cart %}
 		$(document).ajaxCart();
 	{% endif %}
+  
+  var s = skrollr.init();
   </script>
+
 </body>
 </html>

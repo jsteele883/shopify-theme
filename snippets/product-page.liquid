@@ -18,7 +18,7 @@
 <section id="{% include '__advanced-layout-id' with 'product-wrap' %}" class="product-wrap section-wrap">
 	{% include '__containers-open' %}
 	<div class="visible-xs">
-		<h1 class="page-header" itemprop="name">{{ product.title }}</h1>
+		<h4 class="page-header" itemprop="name">{{ product.title }}</h4>
 	</div>
 
 		<div class="row" itemscope itemtype="http://data-vocabulary.org/Product">
@@ -49,14 +49,14 @@
 	
 			<!-- details col -->
 			<div id="product-details" class="col-sm-6 {% if settings.product-page-image-placement == 'right' %}col-sm-pull-6{% endif %}">
-				<h1 class="hidden-xs" itemprop="name">{{ product.title }}</h1>
+				<h4 class="hidden-xs" itemprop="name">{{ product.title }}</h4>
 				{% include 'product-badges' %}
 				
 				{% unless settings.show-price-if-zero == blank and product.price == 0 %}
 				{% if has_prices %}
 				{% if price_is_poa %}
 				<div class="product-price-poa">
-				  <span>{% include '__localize' with 'POA' %}</span>
+				  <span class="text-muted">{% include '__localize' with 'POA' %}</span>
 				</div>
 				{% else %}
 				<div class="product-price" itemprop="offerDetails" itemscope itemtype="http://data-vocabulary.org/Offer">

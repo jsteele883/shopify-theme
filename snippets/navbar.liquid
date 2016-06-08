@@ -29,7 +29,6 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      {% if settings.logo-placement == "top-navbar" and navbar == 'top' %}<a class="navbar-brand{% if settings.logo-image %} navbar-brand-img{% endif %}" href="/">{% include 'logo' %}</a>{% endif %}
       
       {% if navbar == 'top' %}
       <ul class="nav navbar-icons visible-xs">
@@ -42,6 +41,15 @@
       </ul>
       {% endif %}
     </div>
+    {% if template == 'index' %}
+    <div class="flexible-brand" data-0="left:5%;top: 65px; opacity: 0.0;" data-500="left:5%;top: 65px; opacity: 1;">
+      <a class="navbar-brand" href="home"><img alt="RISE" target="_blank" src="//cdn.shopify.com/s/files/1/1223/7364/files/300x195.png?10997912641127751720"></a>
+    </div>
+    {% else %}
+    <div class="flexible-brand">
+      <a class="navbar-brand" href="home"><img alt="RISE" target="_blank" src="//cdn.shopify.com/s/files/1/1223/7364/files/300x195.png?10997912641127751720"></a>
+    </div>
+    {% endif %}
     {% endunless %}
     
     {% unless navbar == 'footer' %}

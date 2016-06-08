@@ -11,7 +11,7 @@
 @function text-muted( $colour ) {
   @return rgba($colour, .5);
 }
-
+ 
 @function border-color( $colour ) {
   @return if( $colour != transparent, darken( $colour, 5% ), transparent );
 }

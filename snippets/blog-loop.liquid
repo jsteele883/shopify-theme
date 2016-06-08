@@ -1,6 +1,6 @@
 <article class="excerpt row">
 	<header class="col-xs-12">
-		{% unless template contains 'testimonials' %}<h2>{{ a.title | link_to: a.url, a.title }}</h2>{% endunless %}
+		{% unless template contains 'testimonials' %}<h4>{{ a.title | link_to: a.url, a.title }}</h4>{% endunless %}
 		<div class="excerpt-meta hidden-lg {% unless has_sidebar %} hidden-md{% endunless %}">
 			{% include 'article-meta' with a %}
 		</div>

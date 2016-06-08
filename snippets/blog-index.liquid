@@ -16,8 +16,6 @@
 	{% include 'pagination' %}
 	{% endpaginate %}
 
-	<p class="text-right rss-subscribe">
-		<i class="fa fa-rss-square text-muted"></i> <a class="text-muted" href="{{ blog.url | append: '.atom' }}">{% include '__localize' with 'Subscribe to RSS feed for ' %} {{ blog.title }}</a>
-	</p>
+
 	{% include '__containers-close' %}
 </section>

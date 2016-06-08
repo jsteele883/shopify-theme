@@ -1,7 +1,8 @@
 {% include '__collection-image' %}
+<div>
 <div class="{% if settings.collections-per-row == blank %}{% include '__thumbnail-span' %}{% else %}col-sm-{{ 12 | divided_by: settings.collections-per-row }}{% endif %}{% if thumbnail_layout == 'masonry' %} masonry{% endif %}">
   <div class="collection-thumbnail text-center">
-    <div class="thumbnail-image">
+    <div class="thumbnail-image"> 
       {{ image }}
     </div>
     <div class="caption clearfix">
@@ -11,4 +12,5 @@
       {% if settings.show-product-count-for-collections %}<div class="text-muted">{{ _collection.all_products_count }}&nbsp;{{ _collection.all_products_count | pluralize: product_title, products_title }}</div>{% endif %}
     </div>
   </div>
+</div>
 </div>
