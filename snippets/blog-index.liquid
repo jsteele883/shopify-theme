@@ -10,7 +10,7 @@
 
 	{% for a in blog.articles %}
     {% include 'blog-loop' with a %}
-  	{% unless forloop.last %}<hr>{% endunless %}
+  	{% unless forloop.last %}{% endunless %}
 	{% endfor %}
 
 	{% include 'pagination' %}
