@@ -23,7 +23,7 @@ input {
 .article-meta {
 	font-size: 1rem;
 	font-family: 'Lora', 'Times New Roman', Serif;
-	line-height: 175%;
+	line-height
 }
 
 .caption .product-price {
@@ -42,6 +42,14 @@ input {
 .carousel-inner {
 	margin-bottom: 15px;
 	height: 100%;
+}
+
+.fa.fa-angle-left {
+	margin-left: 15px;
+}
+
+.fa.fa-angle-right {
+	margin-right: 15px;
 }
 
 .navbar-default .navbar-nav > li > a, .dropdown-menu li a {
@@ -401,7 +409,26 @@ input {
 		margin-left: 15px;
 		margin-right: 15px;
 	}
+}
 
+@media screen and (max-width: 480px) {
+	.overlay img {
+		max-width: 20%;
+	}
+
+	.carousel-inner {
+		margin-bottom: 0rem;
+	}
+
+	.carousel-caption {
+		padding-top: 0px!important;
+		padding-bottom: 0px!important;
+	}
+
+	.carousel-control .fa {
+		font-size: 25px;
+		margin-top: 5px;
+	}
 }
 
 /* EXTRAS */
