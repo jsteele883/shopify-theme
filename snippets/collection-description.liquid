@@ -3,13 +3,11 @@
 <div class="collectionBanner" style="background: url('{{ collection.image | img_url: 'master' }}') no-repeat; background-size:cover; background-position: 50%; background-attachment: fixed;">
   <div class="columns {% if settings.image_1_text_align == 'left' %} align_left sixteen {% elsif settings.image_1_text_align == 'right' %} align_left seven offset-by-nine {% else %} sixteen {% endif %}">
     <h1 class="headline" style="color:{{settings.image_1_text_color}}" data-0="font-size: 35px;padding-top: 150px;" data-450="font-size: 40px; padding-top: 400px">{{ collection.title }}</h1>
-    {% comment %}
     <div class="collection__description">
       <div class="collection__overlay">
         <p>{{ collection.description }}</p>
       </div>
     </div>
-    {% endcomment %}
   </div>
 </div>
 <div class="container main content">
@@ -17,11 +15,9 @@
 <div class="collectionBanner" style="background: url('https://cdn.shopify.com/s/files/1/1223/7364/files/home.jpg?15889687638263023820') no-repeat; background-size:cover; background-position: 50%; background-attachment: fixed;">
   <div class="columns {% if settings.image_1_text_align == 'left' %} align_left sixteen {% elsif settings.image_1_text_align == 'right' %} align_left seven offset-by-nine {% else %} sixteen {% endif %}">
     <h1 class="headline" data-0="font-size: 35px;padding-top: 150px;" data-450="font-size: 40px; padding-top: 400px" style="color:{{settings.image_1_text_color}}">{{ collection.title }}</h1>
-    {% comment %}
     <div class="collection__description">
       <p>{{ collection.description }}</p>
     </div>
-    {% endcomment %}
   </div>
 </div>
 {% endif %}
