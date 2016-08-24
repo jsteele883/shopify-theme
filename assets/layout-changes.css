@@ -14,6 +14,10 @@ input {
 	letter-spacing: 0.1rem;
 }
 
+.carousel-control .fa {
+	width: 0px;
+}
+
 .product-price .money {
 	color: #585858;
 	font-size: 1rem;
@@ -24,6 +28,10 @@ input {
 	font-size: 1rem;
 	font-family: 'Lora', 'Times New Roman', Serif;
 	line-height
+}
+
+.article-meta .share-icons {
+	text-align: left;
 }
 
 .caption .product-price {
@@ -39,17 +47,13 @@ input {
 	text-align: center;
 }
 
+.featured-collection-title {
+	text-align: center;
+}
+
 .carousel-inner {
 	margin-bottom: 15px;
 	height: 100%;
-}
-
-.fa.fa-angle-left {
-	margin-left: 15px;
-}
-
-.fa.fa-angle-right {
-	margin-right: 15px;
 }
 
 .navbar-default .navbar-nav > li > a, .dropdown-menu li a {
@@ -135,7 +139,7 @@ input {
 
 .overlay img {
 	position: absolute;
-	width:300px;
+	width:250px;
 	margin: 0 auto;
 	top: 100px;
 	left: 0;
@@ -175,7 +179,7 @@ input {
 }
 
 .navbar-brand {
-	position: absolute;
+		position: absolute;
     width: 100%;
     left: 0;
     top: 0;
@@ -283,17 +287,18 @@ input {
 }
 
 /* PRODUCTS AND COLLECTIONS */
-
-.collection--header .collection--intro {
-	padding-right: 30px;
-	padding-left: 30px;
+.collectionBanner {
+  margin-top: 40px;
+  width: 100%;
+  min-height: 500px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  text-align: center;
 }
 
-.collection--header {
-	padding-bottom: 5px;
-    padding-top: 95px;
-    background-color: #2e5266;
-    margin-top: 0px;
+.collectionBanner h1 {
+	color: #ffffff;
+	padding-top: 200px;
 }
 
 .collection__description {
@@ -317,9 +322,24 @@ input {
     font-size: 12px;
 }
 
-.collection__feature-image img {
-	margin-bottom: 10px;
-	max-width: none;
+.collection__overlay {
+  max-height: 200px;
+  margin: 0 auto;
+  max-width: 768px;
+  overflow: hidden;
+  padding: 50px;
+  position: relative;
+  position: relative;
+  text-align: center;
+  z-index: 0;
+  content: '';
+  filter: blur(20px);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 .product-thumbnail, .collection-item {
@@ -409,11 +429,38 @@ input {
 		margin-left: 15px;
 		margin-right: 15px;
 	}
+
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		background: #fff;
+		text-align: center;
+		height: 100%;
+		font-size: 22px;
+		height: 100%;
+		max-height: none;
+	}
+
+	.dropdown-menu li a {
+		font-size: 18px;
+		text-align: center;
+	}
+
+	.navbar-default .navbar-nav > li > a, .dropdown-menu li a {
+		line-height: 250%;
+	}
+
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		border-top: none;
+		border-bottom: #f5f5f5;
+	}
 }
 
 @media screen and (max-width: 480px) {
 	.overlay img {
-		max-width: 20%;
+		max-width: 30%;
+	}
+
+	.carousel {
+		padding-top: 50px;
 	}
 
 	.carousel-inner {
@@ -428,6 +475,36 @@ input {
 	.carousel-control .fa {
 		font-size: 25px;
 		margin-top: 5px;
+	}
+
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		background: #fff;
+		text-align: center;
+		height: 100%;
+		font-size: 20px;
+		height: 100%;
+		max-height: none;
+	}
+
+	.dropdown-menu li {
+		text-align: center;
+	}
+
+	.dropdown-menu li a {
+		font-size: 16px;
+	}
+
+	.navbar-default .navbar-nav > li > a, .dropdown-menu li a {
+		line-height: 250%;
+	}
+
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		border-top: none;
+		border-bottom: #f5f5f5;
+	}
+
+	.navbar-brand img {
+		margin-left: 0px;
 	}
 }
 

@@ -1,24 +1,27 @@
-<div class="collection--intro">
-  {% if is_nested %}
-  {% capture collection_title %}<h2>{{ collection-header.title }}</h2>{% endcapture %}
-  {% else %}
-  {% capture collection_title %}<h1>{{ collection-header.title }}</h1>{% endcapture %}
-  {% endif %}
-      
-  {% if settings.collection-header-placement == 'above-products' %}{{ collection_title }}{% endif %}
-  {% unless col_image_position == 'do-not-show' or collection-header.image == null %}
-  <div class="collection__feature-image">
-    {% if col_image_position == 'full-width-above' %}{% assign col_thumb_size = '2048x2048' %}{% else %}{% assign col_thumb_size = 'grande' %}{% endif %}
-    {{ collection-header.image.src | collection_img_url: col_thumb_size | img_tag: collection-header.image.alt }}
-  </div>
-  {% endunless %}
-  {% unless collection-header.description == blank %}
-  {% unless is_nested and settings.show-descriptions-on-nested-collections-page == false %}
-  <div class="animated fadeInRight">
-    <div class="collection__description" data-0="margin-top: 0px;" data-250="margin-top: 50px">
-    {% include '__formatted-content' with collection-header.description %}
+{% if collection.image %}
+</div>
+<div class="collectionBanner" style="background: url('{{ collection.image | img_url: 'master' }}') no-repeat; background-size:cover; background-position: 50%; background-attachment: fixed;">
+  <div class="columns {% if settings.image_1_text_align == 'left' %} align_left sixteen {% elsif settings.image_1_text_align == 'right' %} align_left seven offset-by-nine {% else %} sixteen {% endif %}">
+    <h1 class="headline" style="color:{{settings.image_1_text_color}}" data-0="font-size: 35px;padding-top: 150px;" data-450="font-size: 40px; padding-top: 400px">{{ collection.title }}</h1>
+    {% comment %}
+    <div class="collection__description">
+      <div class="collection__overlay">
+        <p>{{ collection.description }}</p>
+      </div>
     </div>
+    {% endcomment %}
   </div>
-  {% endunless %}
-  {% endunless %}
-</div> 
+</div>
+<div class="container main content">
+{% else %}
+<div class="collectionBanner" style="background: url('https://cdn.shopify.com/s/files/1/1223/7364/files/home.jpg?15889687638263023820') no-repeat; background-size:cover; background-position: 50%; background-attachment: fixed;">
+  <div class="columns {% if settings.image_1_text_align == 'left' %} align_left sixteen {% elsif settings.image_1_text_align == 'right' %} align_left seven offset-by-nine {% else %} sixteen {% endif %}">
+    <h1 class="headline" data-0="font-size: 35px;padding-top: 150px;" data-450="font-size: 40px; padding-top: 400px" style="color:{{settings.image_1_text_color}}">{{ collection.title }}</h1>
+    {% comment %}
+    <div class="collection__description">
+      <p>{{ collection.description }}</p>
+    </div>
+    {% endcomment %}
+  </div>
+</div>
+{% endif %}

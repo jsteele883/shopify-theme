@@ -43,12 +43,12 @@
 
 <!--[if IE]><body class="{% include '__body-classes' %} ie"> <![endif]-->
 <!--[if !(IE)]><!--> <body class="{% include '__body-classes' %}"> <!--<![endif]-->
-  <div id="skrollr-body">
+  <div>
     <div id="wrap">
       {% include 'navbar' with 'top' %}
       <div id="content">
       	{% if has_main_menu %}
-      	<div class="container">
+      	<div class="container" id="skrollr-body">
       		{% include 'navbar' with 'main' %}
       	</div>
       	{% endif %}
@@ -162,7 +162,15 @@
   		$(document).ajaxCart();
   	{% endif %}
 
-    var s = skrollr.init();
+    $(function() {
+     var windowWidth = $(window).width();
+     if(windowWidth > 767){
+       skrollr.init({
+         forceHeight: false
+       });
+     }});
+
+
     </script>
 
 </body>

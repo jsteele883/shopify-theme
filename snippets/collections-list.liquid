@@ -1,3 +1,6 @@
+{% if template == 'index' %}
+  <h3 class="featured-collection-title" data-bottom="letter-spacing: 1px;" data--300-bottom="letter-spacing: 4px;">Featured Collection</h3>
+{% endif %}
 <div class="row{% if thumbnail_layout == 'masonry' %} masonry-collection{% endif %} collection-grid">
 {% if collections-list == 'featured' or collections-list == 't_object' %}
   {% if settings.homepage-collections-limit contains 'row' %}{% assign limit = settings.homepage-collections-limit | remove: 'row' | remove: 'rows' | remove: ' ' | times: settings.collections-per-row %}{% else %}{% assign limit = 50 %}{% endif %}

@@ -12,7 +12,7 @@
     <div class="fill" style="background-image:url{{ slide.featured_image.src | product_img_url: '2048x2048' | img_tag: slide.featured_image.alt }}">
       <div class="overlay" src="{{ 'logo-image-file.png' | asset_url }}" alt="{{ shop.name }} {% include '__localize' with 'logo' %}">
       </div>
-    </div>   
+    </div>
     <div class="carousel-caption">
       <h1>{{ slide.title }}</h1>
       {% assign vendor_handle = slide.vendor | handleize %}
@@ -24,28 +24,28 @@
 {% endcapture %}
 {% assign slide_count = slide_count | plus: 1 %}
 {% endfor %}
-  
+
 {% else %}
 
 {% if settings.show-slider %}
 {% if blogs[settings.slide-blog].articles.size > 0 %}
-{% include 'slider-blog-slider' %} 
+{% include 'slider-blog-slider' %}
 {% else %}
 {% include 'slider-static-slider' %}
 {% endif %}
 {% endif %}
-{% endif %} 
+{% endif %}
 
 {% if slide_count > 0 %}
 <div id="myCarousel" class="carousel slide{% if settings.carousel-transition == 'fade' %} carousel-fade{% endif %}" data-current-slide="slide-1"{% if settings.auto-play-slider %} data-ride="carousel"{% endif %} data-interval="{{ settings.carousel-speed }}">
   <!-- Indicators -->
 
-  
+
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     {{ items }}
   </div>
-  
+
   <!-- Controls -->
   {% if slide_count > 1 %}
   <a class="left carousel-control" href="#myCarousel" data-slide="prev">

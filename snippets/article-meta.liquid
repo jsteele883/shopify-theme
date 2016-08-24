@@ -8,6 +8,15 @@
     {% for tag in article-meta.tags %}
       {{ tag | link_to_tag: tag }}{% unless forloop.last %},{% endunless %}
     {% endfor %}
+    <div class="share-icons">
+      {% capture tweet %}https://twitter.com/intent/tweet?text={% include '__localize' with 'Check out' %} {{ page_title }}—{{ canonical_url }}{% unless settings.social-links-twitter == blank %} (via @{{ settings.social-links-twitter | split: '/' | last }}){% endunless %}{% endcapture %}
+      {% capture email_subject %}{% include '__localize' with 'Check out' %} {{ page_title }}{% endcapture %}
+      {% capture email_body %}{% include '__localize' with 'Hey' %}, {% include '__localize' with 'I was just looking at' %} this blog {% include '__localize' with 'on' %} {{ shop.name }} {% include '__localize' with 'and wanted to share it with you' %}. {% include '__localize' with 'Check out' %} {{ canonical_url }}{% endcapture %}
+      Share:
+      <a href="{{ tweet | replace: ' ','%20' }}" target="_blank"><i class="fa fa-twitter fa-fw"></i></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ canonical_url }}" target="_blank"><i class="fa fa-facebook fa-fw"></i></a>
+      <a href="mailto:?subject={{ email_subject | replace: ' ','%20' }}&body={{ email_body }}" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+    </div>
   </li>
   {% endif %}
   {% if article-meta.comments_enabled? %}

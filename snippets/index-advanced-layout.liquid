@@ -16,10 +16,10 @@
 {% if linklists[sublink_handle].links.size > 0 %}{% assign sublink = true %}{% assign sublink_size = linklists[sublink_handle].links.size %}{% else %}{% assign sublink = false %}{% endif %}
 {% if sublink == true and is_sublink != true %}
 	{% assign is_sublink = true %}
-	
+
 	{% if l.url contains 'features' %}
 	  {% include 'index-features' %}
-	
+
 	{% elsif linklists[sublink_handle].links.first.type == 'collection_link' %}
 	<!-- list collection snippet -->
 	<section id="featured-collections-title-{{ advanced_layout_index }}" class="section-wrap">
@@ -35,7 +35,7 @@
 	<hr>
 {% else %}
 	{% assign t_object = l.object %}
-	
+
 	{% if l.type == 'page_link' %}
 	<!-- page snippet -->
 	<section id="homepage-intro-{{ advanced_layout_index }}" class="section-wrap{% if is_sublink == true %} {% include '__thumbnail-span' %}{% endif %}">
@@ -47,7 +47,7 @@
 		{% include '__containers-close' %}
 	</section>
 	{% endif %}
-	
+
 	{% if l.type == 'collection_link' %}
   	{% if t_object.all_products_count > 0 %}
   	<!-- collection snippet -->
@@ -71,7 +71,7 @@
     	{% endif %}
   	{% endif %}
 	{% endif %}
-	
+
 	{% if l.type == 'blog_link' %}
 	<!-- blog snippet -->
 	{% if is_sublink %}
@@ -88,13 +88,13 @@
 	{% include 'index-blog' with 't_object' %}
 	{% endif %}
 	{% endif %}
-	
+
 	{% if l.type == 'product_link' %}
 	<!-- product snippet -->
 	{% include 'product-page' with 't_object' %}
 	{% endif %}
 
 	{% if is_sublink != true %}<hr>{% endif %}
-	
+
 {% endif %}
 {% endfor %}

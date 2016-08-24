@@ -20,16 +20,16 @@
       {% include 'navbar-menu' with 'footer-right' %}
     </div>
     {% endif %}
-  
+
     {% unless has_top_navbar and navbar == 'main' %}
-    <div class="navbar-header">      
+    <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#{{ navbar }}-nav">
         <span class="sr-only">Toggle main navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      
+
       {% if navbar == 'top' %}
       <ul class="nav navbar-icons visible-xs">
         {% if has_cart %}
@@ -43,18 +43,18 @@
     </div>
     {% if template == 'index' %}
     <div class="flexible-brand" data-0="left:5%;top: 65px; opacity: 0.0;" data-500="left:5%;top: 65px; opacity: 1;">
-      <a class="navbar-brand" href="home"><img alt="RISE" target="_blank" src="//cdn.shopify.com/s/files/1/1223/7364/files/300x195.png?10997912641127751720"></a>
+      <a class="navbar-brand" href="https://rise-outdoors.co.uk/"><img alt="RISE" target="_blank" src="//cdn.shopify.com/s/files/1/1223/7364/files/300x195.png?10997912641127751720"></a>
     </div>
     {% else %}
     <div class="flexible-brand">
-      <a class="navbar-brand" href="home"><img alt="RISE" target="_blank" src="//cdn.shopify.com/s/files/1/1223/7364/files/300x195.png?10997912641127751720"></a>
+      <a class="navbar-brand" href="https://rise-outdoors.co.uk/"><img alt="RISE" target="_blank" src="//cdn.shopify.com/s/files/1/1223/7364/files/300x195.png?10997912641127751720"></a>
     </div>
     {% endif %}
     {% endunless %}
-    
+
     {% unless navbar == 'footer' %}
     <div class="collapse navbar-collapse" id="{{ navbar }}-nav">
-  
+
       {% if navbar == 'top' %}
       <div class="visible-xs">
         {% include 'navbar-main' %}
