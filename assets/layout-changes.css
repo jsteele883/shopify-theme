@@ -299,6 +299,9 @@ input {
 .collectionBanner h1 {
 	color: #ffffff;
 	padding-top: 200px;
+	text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+	-webkit-text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+	-moz-text-shadow:0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .collection__description {
@@ -317,7 +320,7 @@ input {
 
 .collection__description p {
 	line-height: 170%;
-    color: #ffffff;
+    color: #585858;
     font-family: 'Lora', 'Times New Roman', Serif;
     font-size: 12px;
 }
@@ -325,6 +328,12 @@ input {
 .collection__overlay {
 	max-width: 600px;
 	margin: 0 auto;
+	background-color: #fff;
+	color: #585858;
+	padding: 30px;
+	box-shadow: 0 0 30px 4px rgba(8,8,8,0.7);
+	-webkit-box-shadow: 0 0 30px 4px rgba(8,8,8,0.7);
+	-moz-box-shadow: 0 0 30px 4px rgba(8,8,8,0.7);
 }
 
 .product-thumbnail, .collection-item {
