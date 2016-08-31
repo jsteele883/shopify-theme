@@ -500,6 +500,10 @@ input {
 	.navbar-brand img {
 		margin-left: 0px;
 	}
+
+	.collectionBanner {
+		background-size: 200% !important;
+	}
 }
 
 /* EXTRAS */
