@@ -9,7 +9,6 @@
   {{ 'animate.min.css' | asset_url | stylesheet_tag }}
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
 
-
   {{ '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js' | script_tag }}
   {{ 'jquery.min.js' | asset_url | script_tag }}
   {{ '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js' | script_tag }}
@@ -99,6 +98,7 @@
     {{ 'typeahead.js' | asset_url | script_tag }}
     {{ 'jquery.instagram.min.js' | asset_url | script_tag }}
     {{ 'skrollr.min.js' | asset_url | script_tag }}
+    {{ 'instafeed.min.js' | asset_url | script_tag }}
     {% if settings.enable-image-zoom %}{{ 'jquery.zoom.min.js' | asset_url | script_tag }}{% endif %}
     {% if settings.enable-image-lightbox %}{{ 'jquery.colorbox-min.js' | asset_url | script_tag }}{% endif %}
     {% if settings.enable-age-verification %}{% include 'age-check' %}{% endif %}
@@ -171,6 +171,14 @@
      }});
 
 
+    </script>
+
+    <script type="text/javascript">
+      var feed = new Instafeed({
+          get: 'tagged',
+          clientId: '38b65e70bd1e4ae9995d6d552e080619'
+      });
+      feed.run
     </script>
 
 </body>
