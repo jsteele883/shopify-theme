@@ -1,3 +1,4 @@
+{% if blog.articles_count <= 3 %}
 <div class="col-sm-4">
 	<article class="excerpt row">
 
@@ -21,3 +22,28 @@
 
 	</article>
 </div>
+{% else %}
+<div class="col-md-6">
+	<article class="excerpt row">
+
+		<header class="col-xs-12">
+			{% unless template contains 'testimonials' %}<h4>{{ a.title | link_to: a.url, a.title }}</h4>{% endunless %}
+		</header>
+			<section class="col-xs-12">
+			    {% assign has_excerpt = false %}
+					{% if template contains 'testimonials' %}
+			    <i class="fa fa-quote-left pull-left text-muted"></i>
+			    {{ a.content }}
+			    <p class="text-muted"> &mdash; {{ a.title }}</p>
+			    {% elsif a.excerpt == blank %}
+			    {% include '__formatted-content' with a.content %}
+					{% else %}
+			    {% assign has_excerpt = true %}
+					{{ a.excerpt }}
+					{% endif %}
+					{% include 'article-meta' with a %}
+			</section>
+
+	</article>
+</div>
+{% endif %}
