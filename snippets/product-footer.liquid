@@ -28,15 +28,3 @@
 </section>
 {% endif %}
 {% endif %}
-
-{% if settings.secondary-related-collection %}
-{% assign product_collection = collections[settings.secondary-related-collection] %}
-{% if product_collection.products.size > 0 %}
-<section id="product-list" class="section-wrap">
-	{% include '__containers-open' %}
-		<h2 class="page-header"><a href="{{ product_collection.url }}">{% include '__localize' with 'Recommended in' %} {{ product_collection.title }}</a></h2>
-		{% include 'products-list' with 'limit' %}
-	{% include '__containers-close' %}
-</section>
-{% endif %}
-{% endif %}
