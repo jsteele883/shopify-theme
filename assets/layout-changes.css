@@ -30,6 +30,16 @@ input {
 	line-height
 }
 
+.blog-caption {
+	font-style: italic;
+	padding: 30px;
+}
+
+.blog-caption p {
+	font-size: 20px;
+	text-align:center;
+}
+
 .article-meta .share-icons {
 	text-align: left;
 }

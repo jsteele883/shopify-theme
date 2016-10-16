@@ -46,7 +46,7 @@ $text-transform:  none  !default;
        $font-size-h2:   null !default;
        $font-size-h3:   null !default;
        $font-size-h4:   null !default;
-       
+
 @if $heading-size {
   $heading-size-step:   (($heading-size - $font-size-base) / 4) !default;
        $font-size-h1:   $heading-size !default;
@@ -92,9 +92,9 @@ $headings-text-transform: uppercase !default;
       $btn-default-bg:    null !default;
   $btn-default-border:    null !default;
 @if $body-bg {
-  
+
    $btn-default-color:    $text-color !default;
-  
+
       $btn-default-bg:    darken($body-bg, 2%) !default;
   $btn-default-border:    darken($body-bg, 5%) !default;
 }
@@ -114,21 +114,21 @@ $headings-text-transform: uppercase !default;
              $legend-color:    null !default;
       $legend-border-color:    null !default;
      $input-group-addon-bg:    null !default;
-     
+
 @if $body-bg {
                  $input-bg:    lighten($body-bg, 10%) !default;
-  
+
               $input-color:    $text-color !default;
-  
+
              $input-border:    $border-color !default;
   @if $brand-primary {
        $input-border-focus:    $brand-primary !default;
   }
   $input-color-placeholder:    darken($input-bg, 15%) !default;
-  
-  
+
+
              $legend-color:    $text-color !default;
-  
+
       $legend-border-color:    $border-color !default;
 
      // Background color for textual input addons
@@ -141,7 +141,7 @@ $headings-text-transform: uppercase !default;
   $dropdown-bg:    null !default;
   @if $body-bg { $dropdown-bg: lighten($body-bg, 80%) !default; }
 
-                   
+
            $dropdown-divider-bg:    null !default;
            $dropdown-link-color:    null !default;
      $dropdown-link-hover-color:    null !default;
@@ -150,27 +150,27 @@ $headings-text-transform: uppercase !default;
         $dropdown-link-hover-bg:    null !default;
 @if $dropdown-bg {
            $dropdown-divider-bg:    darken($dropdown-bg, 5%) !default;
-  
+
            $dropdown-link-color:    darken( $link-color , 80%) !default;
      $dropdown-link-hover-color:    hover-colour( $dropdown-link-color ) !default;
   $dropdown-link-disabled-color:    lighten($dropdown-link-color, 5%) !default;
          $dropdown-header-color:    lighten($dropdown-link-color, 5%) !default;
-  
+
         $dropdown-link-hover-bg:    darken($dropdown-bg, 10%) !default;
 }
 
 /* Media queries breakpoints */
 
-  
-  
 
 
-  
-  
 
 
-  
-  
+
+
+
+
+
+
 
 
 /* Container sizes */
@@ -199,7 +199,7 @@ $headings-text-transform: uppercase !default;
    $navbar-default-toggle-icon-bar-bg:    null !default;
   $navbar-default-toggle-border-color:    null !default;
 @if $navbar-default-bg {
-  
+
                 $navbar-default-color:     $text-color  !default;
                $navbar-default-border:    darken($navbar-default-bg, 5%) !default;
        $navbar-default-link-active-bg:    darken($navbar-default-bg, 5%) !default;
@@ -207,7 +207,7 @@ $headings-text-transform: uppercase !default;
       $navbar-default-toggle-hover-bg:    darken($navbar-default-bg, 5%) !default;
    $navbar-default-toggle-icon-bar-bg:    text-muted($navbar-default-color) !default;
   $navbar-default-toggle-border-color:    darken($navbar-default-bg, 5%) !default;
-  
+
 }
               // Navbar brand label
           $navbar-default-brand-color:    null !default;
@@ -217,12 +217,12 @@ $headings-text-transform: uppercase !default;
     $navbar-default-brand-hover-color:    hover-colour($navbar-default-brand-color, 10%) !default;
   }
 
-  
-           $navbar-default-link-color:     $link-color  !default; 
+
+           $navbar-default-link-color:     $link-color  !default;
      $navbar-default-link-hover-color:    hover-colour($navbar-default-link-color) !default;
     $navbar-default-link-active-color:    hover-colour($navbar-default-link-color) !default;
   $navbar-default-link-disabled-color:    lighten($navbar-default-link-color, 5%) !default;
-  
+
 
 /* Navs */
                         $nav-link-hover-bg:   null !default;
@@ -233,13 +233,13 @@ $headings-text-transform: uppercase !default;
      $nav-tabs-justified-link-border-color:   null !default;
 @if $body-bg {
                         $nav-link-hover-bg:   darken($body-bg, 10%) !default;
-  
+
                       // Tabs
                     $nav-tabs-border-color:   border-color($body-bg) !default;
          $nav-tabs-link-hover-border-color:   $nav-link-hover-bg !default;
-  
+
          $nav-tabs-active-link-hover-color:   $text-color !default;
-  
+
   $nav-tabs-active-link-hover-border-color:   $nav-tabs-border-color !default;
      $nav-tabs-justified-link-border-color:   $nav-tabs-border-color !default;
 }
@@ -254,19 +254,19 @@ $headings-text-transform: uppercase !default;
    $pagination-disabled-color:    null !default;
       $pagination-disabled-bg:    null !default;
   $pagination-disabled-border:    null !default;
-  
+
 @if $body-bg {
                $pagination-bg:    $body-bg !default;
            $pagination-border:    darken($body-bg, 5%) !default;
-  
+
          $pagination-hover-bg:    darken($body-bg, 10%) !default;
      $pagination-hover-border:    $pagination-border !default;
-  
+
      $pagination-active-color:    text-colour($link-color) !default;
-  
-  
+
+
    $pagination-disabled-color:    lighten($text-color, 5%) !default;
-  
+
       $pagination-disabled-bg:    $body-bg !default;
   $pagination-disabled-border:    $pagination-border !default;
 }
@@ -283,12 +283,12 @@ $headings-text-transform: uppercase !default;
 
 
 /* Thumbnails */
-  
+
                $thumbnail-bg:   transparent !default;
            $thumbnail-border:   transparent !default;
           $thumbnail-padding:   0px !default;
     $thumbnail-border-radius:   0px !default;
-  
+
 
 
 /* Wells */
@@ -302,13 +302,13 @@ $headings-text-transform: uppercase !default;
             $breadcrumb-bg:   null !default;
          $breadcrumb-color:   null !default;
   $breadcrumb-active-color:   null !default;
-  
+
 @if $body-bg {
             $breadcrumb-bg:   rgba(darken($body-bg, 3%), .5) !default;
-  
+
          $breadcrumb-color:   lighten($text-color, 15%) !default;
   $breadcrumb-active-color:   text-muted($text-color) !default;
-  
+
 }
 
 
@@ -322,7 +322,7 @@ $headings-text-transform: uppercase !default;
    $blockquote-border-color:    null !default;
          $abbr-border-color:    null !default;
   $page-header-border-color:    null !default;
-  
+
 @if $body-bg {
 
                 $text-muted:    text-muted($text-color) !default;
@@ -341,8 +341,8 @@ $headings-text-transform: uppercase !default;
 @if $body-bg {
   $hr-border:   border-color($body-bg) !default;
 }
-  
-  
+
+
 /* Footer */
 $footer-bg:              #49484e  !default;
 $footer-headings-color:  #ffffff  !default;
@@ -1327,7 +1327,7 @@ p {
   li {
     padding: 1em 0 !important;
   }
-  
+
   li section {
     h1,
     h2,
@@ -1340,24 +1340,24 @@ p {
       padding-right: 0 !important;
     }
   }
-  
+
   h1 {
     font-size: $font-size-h1 !important;
   }
-  
+
   h2 {
     font-size: $font-size-h2 !important;
     margin-bottom: 1em !important;
   }
-  
+
   h3 {
     font-size: $font-size-h3 !important;
   }
-  
+
   h4 {
     font-size: $font-size-h4 !important;
   }
-  
+
   input,
   textarea,
   select {

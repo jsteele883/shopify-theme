@@ -48,7 +48,7 @@ $text-transform: {% if settings.font-body-case == 'lowercase' or settings.font-b
        $font-size-h2:   null !default;
        $font-size-h3:   null !default;
        $font-size-h4:   null !default;
-       
+
 @if $heading-size {
   $heading-size-step:   (($heading-size - $font-size-base) / 4) !default;
        $font-size-h1:   $heading-size !default;
@@ -120,7 +120,7 @@ $headings-text-transform: {% if settings.font-heading-case == 'lowercase' or set
              $legend-color:    null !default;
       $legend-border-color:    null !default;
      $input-group-addon-bg:    null !default;
-     
+
 @if $body-bg {
                  $input-bg:    lighten($body-bg, 10%) !default;
   {% if settings.text-colour != blank %}
@@ -131,7 +131,7 @@ $headings-text-transform: {% if settings.font-heading-case == 'lowercase' or set
        $input-border-focus:    $brand-primary !default;
   }
   $input-color-placeholder:    darken($input-bg, 15%) !default;
-  
+
   {% if settings.text-colour != blank %}
              $legend-color:    $text-color !default;
   {% endif %}
@@ -149,7 +149,7 @@ $headings-text-transform: {% if settings.font-heading-case == 'lowercase' or set
   $dropdown-bg:    null !default;
   @if $body-bg { $dropdown-bg: lighten($body-bg, 80%) !default; }
 {% endif %}
-                   
+
            $dropdown-divider-bg:    null !default;
            $dropdown-link-color:    null !default;
      $dropdown-link-hover-color:    null !default;
@@ -234,7 +234,7 @@ $headings-text-transform: {% if settings.font-heading-case == 'lowercase' or set
   }
 
   {% if settings.navbar-link-colour != blank or settings.link-colour != blank %}
-           $navbar-default-link-color:    {% if settings.navbar-link-colour != blank %} {{ settings.navbar-link-colour }} {% else %} $link-color {% endif %} !default; 
+           $navbar-default-link-color:    {% if settings.navbar-link-colour != blank %} {{ settings.navbar-link-colour }} {% else %} $link-color {% endif %} !default;
      $navbar-default-link-hover-color:    hover-colour($navbar-default-link-color) !default;
     $navbar-default-link-active-color:    hover-colour($navbar-default-link-color) !default;
   $navbar-default-link-disabled-color:    lighten($navbar-default-link-color, 5%) !default;
@@ -249,7 +249,7 @@ $headings-text-transform: {% if settings.font-heading-case == 'lowercase' or set
      $nav-tabs-justified-link-border-color:   null !default;
 @if $body-bg {
                         $nav-link-hover-bg:   darken($body-bg, 10%) !default;
-  
+
                       // Tabs
                     $nav-tabs-border-color:   border-color($body-bg) !default;
          $nav-tabs-link-hover-border-color:   $nav-link-hover-bg !default;
@@ -270,11 +270,11 @@ $headings-text-transform: {% if settings.font-heading-case == 'lowercase' or set
    $pagination-disabled-color:    null !default;
       $pagination-disabled-bg:    null !default;
   $pagination-disabled-border:    null !default;
-  
+
 @if $body-bg {
                $pagination-bg:    $body-bg !default;
            $pagination-border:    darken($body-bg, 5%) !default;
-  
+
          $pagination-hover-bg:    darken($body-bg, 10%) !default;
      $pagination-hover-border:    $pagination-border !default;
   {% if settings.link-colour != blank %}
@@ -301,7 +301,7 @@ $headings-text-transform: {% if settings.font-heading-case == 'lowercase' or set
 /* Thumbnails */
   {% if settings.show-borders %}
                $thumbnail-bg:   #fff !default;
-           $thumbnail-border:   $border-color !default;  
+           $thumbnail-border:   $border-color !default;
   {% else %}
                $thumbnail-bg:   transparent !default;
            $thumbnail-border:   transparent !default;
@@ -321,7 +321,7 @@ $headings-text-transform: {% if settings.font-heading-case == 'lowercase' or set
             $breadcrumb-bg:   null !default;
          $breadcrumb-color:   null !default;
   $breadcrumb-active-color:   null !default;
-  
+
 @if $body-bg {
             $breadcrumb-bg:   rgba(darken($body-bg, 3%), .5) !default;
   {% if settings.text-colour != blank %}
@@ -341,7 +341,7 @@ $headings-text-transform: {% if settings.font-heading-case == 'lowercase' or set
    $blockquote-border-color:    null !default;
          $abbr-border-color:    null !default;
   $page-header-border-color:    null !default;
-  
+
 @if $body-bg {
 {% if settings.text-colour != blank %}
                 $text-muted:    text-muted($text-color) !default;
@@ -360,8 +360,8 @@ $headings-text-transform: {% if settings.font-heading-case == 'lowercase' or set
 @if $body-bg {
   $hr-border:   border-color($body-bg) !default;
 }
-  
-  
+
+
 /* Footer */
 $footer-bg:             {% if settings.footer-background-colour != blank %} {{ settings.footer-background-colour }} {% else %} false {% endif %} !default;
 $footer-headings-color: {% if settings.footer-heading-colour != blank %} {{ settings.footer-heading-colour }} {% else %} false {% endif %} !default;
@@ -1346,7 +1346,7 @@ p {
   li {
     padding: 1em 0 !important;
   }
-  
+
   li section {
     h1,
     h2,
@@ -1359,24 +1359,24 @@ p {
       padding-right: 0 !important;
     }
   }
-  
+
   h1 {
     font-size: $font-size-h1 !important;
   }
-  
+
   h2 {
     font-size: $font-size-h2 !important;
     margin-bottom: 1em !important;
   }
-  
+
   h3 {
     font-size: $font-size-h3 !important;
   }
-  
+
   h4 {
     font-size: $font-size-h4 !important;
   }
-  
+
   input,
   textarea,
   select {

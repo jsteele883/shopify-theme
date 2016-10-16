@@ -11,7 +11,7 @@
 @function text-muted( $colour ) {
   @return rgba($colour, .5);
 }
- 
+
 @function border-color( $colour ) {
   @return if( $colour != transparent, darken( $colour, 5% ), transparent );
 }
@@ -247,7 +247,7 @@ $text-transform:  none  !default;
        $font-size-h2:   null !default;
        $font-size-h3:   null !default;
        $font-size-h4:   null !default;
-       
+
 @if $heading-size {
   $heading-size-step:   (($heading-size - $font-size-base) / 4) !default;
        $font-size-h1:   $heading-size !default;
@@ -293,9 +293,9 @@ $headings-text-transform: uppercase !default;
       $btn-default-bg:    null !default;
   $btn-default-border:    null !default;
 @if $body-bg {
-  
+
    $btn-default-color:    $text-color !default;
-  
+
       $btn-default-bg:    darken($body-bg, 2%) !default;
   $btn-default-border:    darken($body-bg, 5%) !default;
 }
@@ -315,21 +315,21 @@ $headings-text-transform: uppercase !default;
              $legend-color:    null !default;
       $legend-border-color:    null !default;
      $input-group-addon-bg:    null !default;
-     
+
 @if $body-bg {
                  $input-bg:    lighten($body-bg, 10%) !default;
-  
+
               $input-color:    $text-color !default;
-  
+
              $input-border:    $border-color !default;
   @if $brand-primary {
        $input-border-focus:    $brand-primary !default;
   }
   $input-color-placeholder:    darken($input-bg, 15%) !default;
-  
-  
+
+
              $legend-color:    $text-color !default;
-  
+
       $legend-border-color:    $border-color !default;
 
      // Background color for textual input addons
@@ -342,7 +342,7 @@ $headings-text-transform: uppercase !default;
   $dropdown-bg:    null !default;
   @if $body-bg { $dropdown-bg: lighten($body-bg, 80%) !default; }
 
-                   
+
            $dropdown-divider-bg:    null !default;
            $dropdown-link-color:    null !default;
      $dropdown-link-hover-color:    null !default;
@@ -351,27 +351,27 @@ $headings-text-transform: uppercase !default;
         $dropdown-link-hover-bg:    null !default;
 @if $dropdown-bg {
            $dropdown-divider-bg:    darken($dropdown-bg, 5%) !default;
-  
+
            $dropdown-link-color:    darken( $link-color , 80%) !default;
      $dropdown-link-hover-color:    hover-colour( $dropdown-link-color ) !default;
   $dropdown-link-disabled-color:    lighten($dropdown-link-color, 5%) !default;
          $dropdown-header-color:    lighten($dropdown-link-color, 5%) !default;
-  
+
         $dropdown-link-hover-bg:    darken($dropdown-bg, 10%) !default;
 }
 
 /* Media queries breakpoints */
 
-  
-  
 
 
-  
-  
 
 
-  
-  
+
+
+
+
+
+
 
 
 /* Container sizes */
@@ -400,7 +400,7 @@ $headings-text-transform: uppercase !default;
    $navbar-default-toggle-icon-bar-bg:    null !default;
   $navbar-default-toggle-border-color:    null !default;
 @if $navbar-default-bg {
-  
+
                 $navbar-default-color:     $text-color  !default;
                $navbar-default-border:    darken($navbar-default-bg, 5%) !default;
        $navbar-default-link-active-bg:    darken($navbar-default-bg, 5%) !default;
@@ -408,7 +408,7 @@ $headings-text-transform: uppercase !default;
       $navbar-default-toggle-hover-bg:    darken($navbar-default-bg, 5%) !default;
    $navbar-default-toggle-icon-bar-bg:    text-muted($navbar-default-color) !default;
   $navbar-default-toggle-border-color:    darken($navbar-default-bg, 5%) !default;
-  
+
 }
               // Navbar brand label
           $navbar-default-brand-color:    null !default;
@@ -418,12 +418,12 @@ $headings-text-transform: uppercase !default;
     $navbar-default-brand-hover-color:    hover-colour($navbar-default-brand-color, 10%) !default;
   }
 
-  
-           $navbar-default-link-color:     $link-color  !default; 
+
+           $navbar-default-link-color:     $link-color  !default;
      $navbar-default-link-hover-color:    hover-colour($navbar-default-link-color) !default;
     $navbar-default-link-active-color:    hover-colour($navbar-default-link-color) !default;
   $navbar-default-link-disabled-color:    lighten($navbar-default-link-color, 5%) !default;
-  
+
 
 /* Navs */
                         $nav-link-hover-bg:   null !default;
@@ -434,13 +434,13 @@ $headings-text-transform: uppercase !default;
      $nav-tabs-justified-link-border-color:   null !default;
 @if $body-bg {
                         $nav-link-hover-bg:   darken($body-bg, 10%) !default;
-  
+
                       // Tabs
                     $nav-tabs-border-color:   border-color($body-bg) !default;
          $nav-tabs-link-hover-border-color:   $nav-link-hover-bg !default;
-  
+
          $nav-tabs-active-link-hover-color:   $text-color !default;
-  
+
   $nav-tabs-active-link-hover-border-color:   $nav-tabs-border-color !default;
      $nav-tabs-justified-link-border-color:   $nav-tabs-border-color !default;
 }
@@ -455,19 +455,19 @@ $headings-text-transform: uppercase !default;
    $pagination-disabled-color:    null !default;
       $pagination-disabled-bg:    null !default;
   $pagination-disabled-border:    null !default;
-  
+
 @if $body-bg {
                $pagination-bg:    $body-bg !default;
            $pagination-border:    darken($body-bg, 5%) !default;
-  
+
          $pagination-hover-bg:    darken($body-bg, 10%) !default;
      $pagination-hover-border:    $pagination-border !default;
-  
+
      $pagination-active-color:    text-colour($link-color) !default;
-  
-  
+
+
    $pagination-disabled-color:    lighten($text-color, 5%) !default;
-  
+
       $pagination-disabled-bg:    $body-bg !default;
   $pagination-disabled-border:    $pagination-border !default;
 }
@@ -484,12 +484,12 @@ $headings-text-transform: uppercase !default;
 
 
 /* Thumbnails */
-  
+
                $thumbnail-bg:   transparent !default;
            $thumbnail-border:   transparent !default;
           $thumbnail-padding:   0px !default;
     $thumbnail-border-radius:   0px !default;
-  
+
 
 
 /* Wells */
@@ -503,13 +503,13 @@ $headings-text-transform: uppercase !default;
             $breadcrumb-bg:   null !default;
          $breadcrumb-color:   null !default;
   $breadcrumb-active-color:   null !default;
-  
+
 @if $body-bg {
             $breadcrumb-bg:   rgba(darken($body-bg, 3%), .5) !default;
-  
+
          $breadcrumb-color:   lighten($text-color, 15%) !default;
   $breadcrumb-active-color:   text-muted($text-color) !default;
-  
+
 }
 
 
@@ -523,7 +523,7 @@ $headings-text-transform: uppercase !default;
    $blockquote-border-color:    null !default;
          $abbr-border-color:    null !default;
   $page-header-border-color:    null !default;
-  
+
 @if $body-bg {
 
                 $text-muted:    text-muted($text-color) !default;
@@ -542,8 +542,8 @@ $headings-text-transform: uppercase !default;
 @if $body-bg {
   $hr-border:   border-color($body-bg) !default;
 }
-  
-  
+
+
 /* Footer */
 $footer-bg:              #49484e  !default;
 $footer-headings-color:  #ffffff  !default;
@@ -1476,7 +1476,7 @@ $hr-border:                   $gray-lighter !default;
 
 @mixin label-variant($color) {
   background-color: $color;
-  
+
   &[href] {
     &:hover,
     &:focus {
@@ -8271,7 +8271,7 @@ body {
 .navbar-icons {
   padding-left: 0;
   float: left;
-  
+
   > li {
     float: left;
     > a {
@@ -8279,7 +8279,7 @@ body {
       padding-bottom: $navbar-padding-vertical;
     }
   }
-  
+
   > li > a {
     color: $navbar-default-link-color;
 
@@ -8309,11 +8309,11 @@ body {
 
 /* Body */
 .js {
-  
+
   .thumbnail-image a, .product-main-thumb a {
     opacity: 0;
   }
-  
+
 }
 
 body {
@@ -8348,11 +8348,11 @@ body {
   }
 
 
-  
+
   @if $body-bg {
     @include background-color($body-bg);
   }
-  
+
   font-weight: $font-weight;
   font-style: $font-style;
   text-transform: $text-transform;
@@ -8361,18 +8361,18 @@ body {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-style:  normal ;
   text-transform: $headings-text-transform;
-  
+
     text-shadow: 0 1px 0 rgba(if(lightness($body-bg) > 60%, lighten($body-bg, 100%), darken($body-bg, 100%)), .25);
-  
+
   margin-top: 1em;
-  
+
   td & {
     margin-top: 0;
     margin-bottom: 0;
   }
   a, a:hover, a:active, a:focus {
     color: inherit;
-    
+
   }
 }
 
@@ -8395,11 +8395,11 @@ img {
 
 .list-nav {
   @extend .list-unstyled;
-  
+
   li {
     margin-top: 1em;
   }
-  
+
   li:first-child {
     margin-top: 0;
   }
@@ -8429,7 +8429,7 @@ header .article-meta{
 
 .label {
   font-weight: normal;
-  
+
    & + .label {
      margin-left: .5em;
   }
@@ -8452,7 +8452,7 @@ header .article-meta{
   .navbar & {
     a {
       color: $navbar-default-link-color;
-      
+
       &:hover {
         color: $navbar-default-link-hover-color;
       }
@@ -8497,7 +8497,7 @@ header .article-meta{
   .navbar-text.navbar-left:first-child{
     margin-left: 0;
   }
-  
+
   .navbar-center{
     float: none;
     text-align: center;
@@ -8514,14 +8514,14 @@ header .article-meta{
     .nav li.dropdown.open {
       display: block;
       position: static;
-  
+
       .dropdown-menu {
         padding: 0;
         padding-top: $grid-gutter-width;
         padding-bottom: $grid-gutter-width;
         left: -25%;
         right: -25%;
-    
+
         margin-left: auto;
         margin-right: auto;
       }
@@ -8533,7 +8533,7 @@ header .article-meta{
   .dropdown-menu li {
     margin-bottom: 5px;
   }
-  
+
   .submenu ul li {
     margin-bottom: 5px;
     a {
@@ -8541,16 +8541,16 @@ header .article-meta{
       padding-bottom: 5px;
     }
   }
-    
-  .nav li.dropdown.open .dropdown-menu {  
+
+  .nav li.dropdown.open .dropdown-menu {
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-      width: $container-sm;    
+      width: $container-sm;
     }
-  
+
     @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
       width: $container-md;
     }
-  
+
     @media (min-width: $screen-lg-min) {
       width: $container-lg;
     }
@@ -8574,7 +8574,7 @@ header .article-meta{
 .navbar-nav .open .dropdown-menu .dropdown-header, .submenu .nav .dropdown-header{
   margin-top: 0;
   font-weight: bold;
-  
+
   @media (max-width: $screen-xs-max) {
     color: $navbar-default-link-hover-color;
   }
@@ -8617,9 +8617,9 @@ header .article-meta{
 }
 
 #navbar-top, #navbar-footer, #navbar-main {
-  
+
     $font-family-navbar:   false;
-  
+
   $font-size-navbar:          false ;
   $font-weight-navbar:        false ;
   $font-style-navbar:         normal ;
@@ -8675,7 +8675,7 @@ header .article-meta{
     border-top-right-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
   }
-} 
+}
 
 .tt-dropdown-menu {
   min-width: 160px;
@@ -8713,9 +8713,9 @@ header .article-meta{
 }
 
 .site--page {
-  
+
   @extend .container;
-  
+
 }
 
 /* Thumbnails */
@@ -8732,29 +8732,29 @@ header .article-meta{
 .collection--header {
   margin-bottom: $grid-gutter-width;
   margin-top: $grid-gutter-width;
-  
+
   .collection--intro {
     @include make-row();
-    
+
     & > h1, & > h2 {
       @extend .page-header;
       @include make-xs-column(12);
     }
-    
+
     .collection__feature-image,
     .collection__description {
       @include make-xs-column(12);
-      
-      
+
+
     }
-    
+
     .collection__feature-image {
-      
+
     }
-  
+
     .collection__description {
-      
-      
+
+
       & > h1:first-child,
       & > h2:first-child {
         margin-top: 0;
@@ -8766,7 +8766,7 @@ header .article-meta{
 .collection-thumbnail, .product-thumbnail {
   .thumbnail-image.has-secondary-image{
     position: relative;
-  
+
     a:first-of-type {
       opacity: 0 !important;
     }
@@ -8818,7 +8818,7 @@ header .article-meta{
 
 .btn-signup {
   .navbar-default & {
-    @if $btn-primary-bg == $navbar-default-bg {  
+    @if $btn-primary-bg == $navbar-default-bg {
       @if lightness($btn-primary-bg) < 5% {
         @include button-variant(lighten($btn-primary-color,10%), lighten($btn-primary-bg,10%), lighten($btn-primary-border,10%));
       } @else {
@@ -8828,7 +8828,7 @@ header .article-meta{
       @extend .btn-primary;
     }
   }
-  
+
   .footer__grid & {
     @extend .btn-primary;
   }
@@ -8871,7 +8871,7 @@ header .article-meta{
 
 .product-main-image {
   margin-top: 2.5em;
-   cursor: pointer; 
+   cursor: pointer;
 }
 
 .has-overlay-title-on-hover {
@@ -8914,23 +8914,23 @@ header .article-meta{
   @extend .h4;
   line-height: normal;
   @extend .clearfix;
-  
+
   .money {
     color: $brand-primary;
   }
-  
+
   .text-muted .money {
     color: $text-muted;
   }
-  
+
   .caption & {
     margin: 0;
   }
-  
+
   .template-product & {
     margin: $grid-gutter-width 0;
   }
-  
+
   del {
     white-space: nowrap;
   }
@@ -8978,7 +8978,7 @@ header .article-meta{
   .label-sale {
     display: none;
   }
-} 
+}
 
 .image-placeholder {
   display: block;
@@ -8989,7 +8989,7 @@ header .article-meta{
   text-align: center;
   color: $body-bg;
   background-color: darken($body-bg, 8%);
-  
+
   .image-placeholder-content {
     bottom: 0;
     left: 0;
@@ -9049,7 +9049,7 @@ header .article-meta{
   img {
     margin: auto;
   }
-  
+
   .money {
     @extend .text-right;
   }
@@ -9145,33 +9145,33 @@ header .article-meta{
   }
 }
 
-/* Sidebar */  
+/* Sidebar */
 .sidebar {
   h3 {
     margin-top: 2em;
-    
+
     &:first-child {
       margin-top: 0;
     }
   }
-  
+
   padding-top: $padding-base-horizontal;
   padding-bottom: $padding-base-horizontal;
-  
-  
-  
-  
+
+
+
+
   @media (min-width: $screen-sm-min) {
     // Move background color onto .sidebar-content
     padding-top: $grid-gutter-width;
     padding-bottom: 0;
     margin-bottom: $grid-gutter-width;
-     background-color: transparent; 
+     background-color: transparent;
     .sidebar-content{
-      
+
     }
   }
-  
+
   .active a, .active {
     @extend strong;
   }
@@ -9226,7 +9226,7 @@ header .article-meta{
     @include make-xs-column(3);
     @extend .h3;
   }
-  
+
   .feature-description {
     @include make-xs-column(9);
   }
@@ -9265,33 +9265,33 @@ header .article-meta{
 
 // Slider caption positions
 
-  
-  
-  
+
+
+
   $slide-1-dark: false;
   $slide-1-position: bottom center;
 
-  
-  
-  
+
+
+
   $slide-2-dark: false;
   $slide-2-position: middle center;
 
-  
-  
-  
+
+
+
   $slide-3-dark: true;
   $slide-3-position: bottom right;
 
-  
-  
-  
+
+
+
   $slide-4-dark: false;
   $slide-4-position: top left;
 
-  
-  
-  
+
+
+
   $slide-5-dark: false;
   $slide-5-position: top left;
 
@@ -9307,7 +9307,7 @@ $i: 1;
     top: 0;
     bottom: auto;
   }
-  
+
   .vertical-align-middle & {
     @media (min-width: $screen-lg-min){
       top: 35%;
@@ -9317,26 +9317,26 @@ $i: 1;
     }
     bottom: auto;
   }
-  
+
   .align-left & {
     text-align: left;
-    
+
     h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
       text-align: left;
     }
   }
-  
+
   .align-right & {
     text-align: right;
     h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
       text-align: right;
     }
   }
-  
+
   .theme-light & {
     color: $gray-dark;
     text-shadow: none;
-  
+
     h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
       text-shadow: none;
       @media (min-width: $screen-sm-min){
@@ -9480,24 +9480,24 @@ $i: 1;
     float: none !important;
     text-align: center;
   }
-  
+
   #cboxClose {
     display: none;
     position: absolute;
     top: -1.5em;
     right: -2em;
   }
-  
+
   #cboxPrevious, #cboxNext {
     position: absolute;
     top: 50%;
     margin-top: -1em;
   }
-  
+
   #cboxPrevious {
     left: 0;
   }
-  
+
   #cboxNext {
     right: 0;
   }
@@ -9510,7 +9510,7 @@ $i: 1;
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 35px;
 	height: 0;
-	
+
 	iframe, object, embed {
   	position: absolute;
   	top: 0;
@@ -9522,9 +9522,9 @@ $i: 1;
 
 /* Brand */
 .navbar-brand, .brand {
-  
+
     $font-family-brand:   'Lumber Jack',Georgia, Utopia, 'Times New Roman', Times, serif !default;
-  
+
   $font-size-brand:          false ;
   $font-weight-brand:        500 ;
   $font-style-brand:         normal ;

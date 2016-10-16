@@ -27,9 +27,9 @@ $container-width-small-devices:       750px !default;
  * Setting Variables
  */
 
-$container-width-large-devices: 1200px; 
+$container-width-large-devices: 1200px;
 $container-width-medium-devices: 970px; 
- 
+
 $site-background-image:false;
 $body-background-colour: #444349;
 $body-heading-colour: #7f72b3;
@@ -90,33 +90,33 @@ $font-nav-secondary-italic: false;
 $show-borders: false;
 
 
-  
-  
-  
+
+
+
   $slide--dark: false;
   $slide--position: bottom center;
 
-  
-  
-  
+
+
+
   $slide--dark: false;
   $slide--position: bottom center;
 
-  
-  
-  
+
+
+
   $slide--dark: false;
   $slide--position: bottom center;
 
-  
-  
-  
+
+
+
   $slide--dark: false;
   $slide--position: bottom center;
 
-  
-  
-  
+
+
+
   $slide--dark: false;
   $slide--position: bottom center;
 
@@ -125,7 +125,7 @@ $slides: ($slide-1-dark $slide-1-position) ($slide-2-dark $slide-2-position) ($s
 /*
  * Functions and Mixins
  */
- 
+
 @function button-colour( $colour, $strength: 100% ) {
   @return if(lightness($colour) > 80%, darken($colour, $strength), lighten($colour, $strength));
 }
@@ -197,7 +197,7 @@ $slides: ($slide-1-dark $slide-1-position) ($slide-2-dark $slide-2-position) ($s
   }
   .page-header{
     border-bottom-color: darken-colour($colour, 7.5%);
-  }  
+  }
   hr{
     border-top-color: darken-colour($colour, 7.5%);
   }
@@ -205,11 +205,11 @@ $slides: ($slide-1-dark $slide-1-position) ($slide-2-dark $slide-2-position) ($s
   .table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td, .table-bordered, .table-bordered > thead > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > tfoot > tr > td{
     border-color: darken-colour($colour, 7.5%);
   }
-  
+
   .table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th{
     background-color: darken-colour($colour, 4%);
   }
-  
+
   .table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th{
     background-color: darken-colour($colour, 6%);
   }
@@ -217,12 +217,12 @@ $slides: ($slide-1-dark $slide-1-position) ($slide-2-dark $slide-2-position) ($s
   .thumbnail{
     border-color: darken-colour($colour, 7.5%);
   }
-  
+
   .well{
     border-color: darken-colour($colour, 7.5%);
     background-color: darken-colour($body-background-colour, 4%);
   }
-  
+
   @media (max-width: 768px){
     .dropdown-menu .divider{
       background-color: darken-colour($colour, 7.5%);
@@ -398,7 +398,7 @@ body{
 			padding-bottom: $footer-height;
 		}
 		#footer-content{
-			> .container{        
+			> .container{
 				margin-top: -$footer-height;
 				min-height: $footer-height;
 			}
@@ -417,9 +417,9 @@ body{
 			}
 		}
 	}
-  
-	
-  
+
+
+
 	/* Design and colour schemes */
 	@if $font-family-body{
 		font-family: $font-family-body;
@@ -435,7 +435,7 @@ body{
 	}
 	text-transform: $font-transform-body;
 	font-weight: $font-weight-body;
-  
+
 	@if $site-background-image {
 		background-image: url('//cdn.shopify.com/s/files/1/1223/7364/t/2/assets/site-background-image-file.jpg?13469825480355860468');
 		background-repeat: repeat;
@@ -446,7 +446,7 @@ body{
 	@include heading-colour($body-heading-colour, $body-background-colour);
 	@include text-colour($body-text-colour, $body-background-colour);
 	@include link-colour($body-link-colour, $body-background-colour);
-  
+
 	@if $show-borders == false{
 		.page-header, .thumbnail, .table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
 			border: none;
@@ -525,7 +525,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
   background-color: $button-colour;
   border-color: $button-colour;
   color: $button-text-colour;
-  
+
   &:hover {
     background-color: darken($button-colour, 2%);
     border-color: darken($button-colour, 2%);
