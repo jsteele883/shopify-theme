@@ -295,9 +295,9 @@ input {
 	color: #2d3142;
 }
 
-.btn-signup {
+.btn-signup, .btn-default {
 	color: #fff;
-    background-color: #2d3142;
+  background-color: #2d3142;
 }
 
 .msg {
@@ -468,6 +468,25 @@ input {
 	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
 		border-top: none;
 		border-bottom: #f5f5f5;
+	}
+
+	.form-inline .input-group, .navbar-form .input-group {
+		display: block;
+	}
+
+	.navbar-form .btn {
+		width: 80%;
+		padding: 20px 10px;
+		margin-top: 20px;
+	}
+
+	.navbar-form {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.input-group>.twitter-typeahead>.tt-query, .input-group>.twitter-typeahead>.tt-hint {
+		border-radius: 4px !important;
 	}
 }
 
