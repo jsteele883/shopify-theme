@@ -18,13 +18,6 @@
     {% endif %}
     {% endfor %}
   </div>
-  <div class="search-pages">
-    {% for i in search.results %}
-    {% if i.price == blank %}
-    {% include 'search-loop' %}
-    {% endif %}
-    {% endfor %}
-  </div>
   {% include 'pagination' %}
   {% endpaginate %}
   {% else %}
