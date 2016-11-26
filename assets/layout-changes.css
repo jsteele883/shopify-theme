@@ -223,6 +223,10 @@ input {
 	padding-top: 100px;
 }
 
+#search-wrap {
+	padding-top: 90px;
+}
+
 /* ABOUT US */
 
 .entry-content {
@@ -400,6 +404,10 @@ input {
 	.navbar .container {
 		padding-left: 0px;
 		padding-right: 30px;
+	}
+
+	.navbar-brand img {
+		display: none;
 	}
 }
 
