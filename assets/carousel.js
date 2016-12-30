@@ -227,13 +227,13 @@
   $(window).scroll(function() {
    $(".carousel-control .fa").css({
     'opacity' : 1-(($(this).scrollTop())/100)
-  });          
+  });
  });
 
     $(window).scroll(function() {
-   $(".overlay").css({
+   $(".overlay img").css({
     'opacity' : 1-(($(this).scrollTop())/600)
-  });          
+  });
  });
 
 
