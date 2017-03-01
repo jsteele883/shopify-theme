@@ -43,6 +43,7 @@
 
 <!--[if IE]><body class="{% include '__body-classes' %} ie"> <![endif]-->
 <!--[if !(IE)]><!--> <body class="{% include '__body-classes' %}"> <!--<![endif]-->
+<div class="se-pre-con"></div>
   <div>
     <div id="wrap">
       {% include 'navbar' with 'top' %}
@@ -169,6 +170,12 @@
          forceHeight: false
        });
      }});
+
+     // Wait for window load
+     $(window).load(function() {
+       // Animate loader off screen
+       $(".se-pre-con").fadeOut("slow");;
+     });
 
 
     </script>
