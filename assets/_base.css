@@ -5419,15 +5419,6 @@ a.icon:hover {
 .media-body {
   margin-bottom: 30px; }
 
-.loader {
-  margin: 0 auto;
-  z-index: 9999;
-  cursor: wait;
-  width: 25px;
-  height: 25px;
-  background: url("load.gif") no-repeat;
-  display: none; }
-
 .main-content table {
   margin-top: 30px;
   margin-bottom: 30px; }
