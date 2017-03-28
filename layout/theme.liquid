@@ -72,8 +72,6 @@
 
   		{{ content_for_layout }}
 
-      <div id="instafeed"></div>
-
   		{% if has_sidebar and settings[sidebar_template] %}
   			</div>
   			{% include 'sidebar' %}
@@ -184,6 +182,7 @@
         sortBy: 'most-recent',
         userId: '3017214531',
         accessToken: '3017214531.1677ed0.8601282d471c4658b89216e420f08072',
+        resolution: 'low_resolution',
     });
     feed.run();
 

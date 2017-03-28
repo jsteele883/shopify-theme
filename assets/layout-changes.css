@@ -61,7 +61,7 @@ input {
 	height: 400px;
 }
 
-.featured-collection-title {
+.featured-title {
 	text-align: center;
 }
 
@@ -247,6 +247,17 @@ input {
 
 .animated {
 	animation-delay: 0.5s;
+}
+
+/* INSTAGRAM WIDGET */
+
+.instagram-feed {
+	text-align: center;
+}
+.instagram-feed_photos a {
+	display: inline-block;
+	margin-left: 5px;
+	width: 190px;
 }
 
 /* NEWSLETTER SIGN UP */
