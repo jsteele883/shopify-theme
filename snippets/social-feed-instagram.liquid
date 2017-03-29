@@ -7,7 +7,7 @@
 <section id="instagram-widget" class="section-wrap instagram-feed" data-client-id="{{ settings.instagram-client-id }}" data-hashtag="{{ page_hashtag }}" data-default-hashtag="{{ settings.instagram-default-hashtag }}" data-blacklist="{{ settings.instagram-blacklist }}" data-image-count="8">
 		{% include '__containers-open' %}
 			{% if template != "article" %}
-			<h3 class="featured-title">Our Photos</h2>
+			<h3 class="featured-title" data-bottom="letter-spacing: 1px;" data--300-bottom="letter-spacing: 4px;">Our Photos</h2>
 			<p>Tag your photos using #<span class="hashtag">{{ settings.instagram-default-hashtag }}</span> to be seen on our Instagram feed{% endif %}.</p>
 			<div id="instafeed" class="instagram-feed_photos"></div>
 </section>

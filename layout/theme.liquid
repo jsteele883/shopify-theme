@@ -114,16 +114,14 @@
         $('.handle_{{ current_handle }}').parents('.collapse').addClass('in');
       {% endunless %}
 
-    	{% if settings.instagram-feed and settings.instagram-client-id != blank %}
-    	  if(instagramThumbnailClass === undefined){
-      		var instagramThumbnailClass = "{% include '__thumbnail-span' %}";
-      	}
-      	$(function(){
-    			$('#instagram-widget').bootstrapifyInstagram({
-    				thumbClass: instagramThumbnailClass
-    			});
-    		});
-    	{% endif %}
+      var feed = new Instafeed({
+          get: 'user',
+          sortBy: 'most-recent',
+          userId: '3017214531',
+          accessToken: '3017214531.1677ed0.8601282d471c4658b89216e420f08072',
+          resolution: 'low_resolution',
+      });
+      feed.run();
 
       {% if thumbnail_layout == 'masonry' %}
         var $container = $('.masonry-collection').imagesLoaded(function(){
@@ -176,15 +174,6 @@
        // Animate loader off screen
        $(".se-pre-con").fadeOut("slow");;
      });
-
-    var feed = new Instafeed({
-        get: 'user',
-        sortBy: 'most-recent',
-        userId: '3017214531',
-        accessToken: '3017214531.1677ed0.8601282d471c4658b89216e420f08072',
-        resolution: 'low_resolution',
-    });
-    feed.run();
 
     </script>
 
