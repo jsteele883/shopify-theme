@@ -114,12 +114,18 @@
         $('.handle_{{ current_handle }}').parents('.collapse').addClass('in');
       {% endunless %}
 
+      {% assign instafeed_template = '<div class="col-lg-3 col-sm-3 col-xs-4"><a href="{{link}}" target="_blank"><img class="img-responsive" src="{{image}}" /></a></div>' %}
+
+      var img_qty; if(window.innerWidth>768){ img_qty=20 }else{ img_qty=18 };
+
       var feed = new Instafeed({
           get: 'user',
           sortBy: 'most-recent',
           userId: '3017214531',
           accessToken: '3017214531.1677ed0.8601282d471c4658b89216e420f08072',
+          template: '{{ instafeed_template }}',
           resolution: 'low_resolution',
+          limit: img_qty,
       });
       feed.run();
 

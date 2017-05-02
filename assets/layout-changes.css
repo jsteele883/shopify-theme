@@ -254,10 +254,14 @@ input {
 .instagram-feed {
 	text-align: center;
 }
-.instagram-feed_photos a {
-	display: inline-block;
-	margin-left: 5px;
-	width: 190px;
+
+#instafeed .col-xs-4  {
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.instagram-feed_photos a:hover {
+	opacity: 0.75;
 }
 
 /* NEWSLETTER SIGN UP */
