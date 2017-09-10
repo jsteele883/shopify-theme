@@ -1,12 +1,4 @@
----
-:api_key: 51302088a0b3ee2d807db2cea288931d
-:password: 48f371b020111e7a460e4f74c1e52ad2
-:store: rise-outdoors-2.myshopify.com
-:theme_id: '108480519'
-:whitelist_files:
-- layout/
-- assets/
-- config/
-- snippets/
-- templates/
-- locales/
+development:
+  password: 48f371b020111e7a460e4f74c1e52ad2
+  theme_id: "108480519"
+  store: rise-outdoors-2.myshopify.com
