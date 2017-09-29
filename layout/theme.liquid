@@ -49,9 +49,7 @@
       {% include 'navbar' with 'top' %}
       <div id="content">
       	{% if has_main_menu %}
-      	<div class="container" id="skrollr-body">
       		{% include 'navbar' with 'main' %}
-      	</div>
       	{% endif %}
 
         {% if settings.slider-width == "window-width" and template == "index" %}{% include 'slider' %}{% include 'brand' %}{% elsif settings.slider-width == "window-width" %}{% include 'banner' %}{% endif %}
@@ -99,7 +97,6 @@
     {{ 'tooltip.js' | asset_url | script_tag }}
     {{ 'popover.js' | asset_url | script_tag }}
     {{ 'typeahead.js' | asset_url | script_tag }}
-    {{ 'skrollr.min.js' | asset_url | script_tag }}
     {% if settings.enable-image-zoom %}{{ 'jquery.zoom.min.js' | asset_url | script_tag }}{% endif %}
     {% if settings.enable-image-lightbox %}{{ 'jquery.colorbox-min.js' | asset_url | script_tag }}{% endif %}
     {% if settings.enable-age-verification %}{% include 'age-check' %}{% endif %}
@@ -166,14 +163,6 @@
   	{% if settings.ajax-cart %}
   		$(document).ajaxCart();
   	{% endif %}
-
-    $(function() {
-     var windowWidth = $(window).width();
-     if(windowWidth > 1000){
-       skrollr.init({
-         forceHeight: false
-       });
-     }});
 
      // Wait for window load
      $(window).load(function() {
