@@ -4,18 +4,6 @@
 	{% include 'index-advanced-layout' %}
 {% else %}
 
-<!-- Homepage Intro -->
-{% unless settings.homepage-content == blank %}{% assign homepage = pages[settings.homepage-content] %}
-<section id="homepage-intro" class="section-wrap">
-	{% include '__containers-open' %}
-		<h1 class="page-header" id="homepage-title">{{ homepage.title }}</h1>
-		{% unless homepage.content == blank %}
-		{% include '__formatted-content' with homepage.content %}
-		{% endunless %}
-	{% include '__containers-close' %}
-</section>
-{% endunless %}
-
 <!-- Features Linklist Overview -->
 {% include 'index-features' %}
 
@@ -56,6 +44,18 @@
     {% include 'onboarding-featured-products' %}
   {% endif %}
 {% endif %}
+{% endunless %}
+
+<!-- Homepage Intro -->
+{% unless settings.homepage-content == blank %}{% assign homepage = pages[settings.homepage-content] %}
+<section id="homepage-intro" class="section-wrap">
+	{% include '__containers-open' %}
+		<h1 class="page-header" id="homepage-title">{{ homepage.title }}</h1>
+		{% unless homepage.content == blank %}
+		{% include '__formatted-content' with homepage.content %}
+		{% endunless %}
+	{% include '__containers-close' %}
+</section>
 {% endunless %}
 
 <!-- Homepage Blog Overview -->
