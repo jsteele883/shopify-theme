@@ -222,7 +222,17 @@
 
     // CAROUSEL SCROLL-FUNCTION
   // ==========================
+  $(window).on('load', function () {
+    $(".navbar-brand").hide();
+  });
 
+$(window).scroll(function() {
+  if($(window).scrollTop()>100){
+         $(".navbar-brand").fadeIn();
+      }else{
+         $(".navbar-brand").fadeOut();
+      }
+});
 
   $(window).scroll(function() {
    $(".carousel-control .fa").css({
