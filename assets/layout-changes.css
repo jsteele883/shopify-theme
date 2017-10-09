@@ -279,11 +279,7 @@ input {
 /* NEWSLETTER SIGN UP */
 
 .fullscreen.background {
-    background-repeat:no-repeat;
-    /* custom background-position */
-    background-position: center top;
-    background-repeat: no-repeat;
-    /* ie8- graceful degradation */
+  	background: #ccdbdc;
     height: 400px;
 }
 
@@ -332,7 +328,6 @@ input {
 
 /* PRODUCTS AND COLLECTIONS */
 .collectionBanner {
-  margin-top: 40px;
   width: 100%;
   min-height: 500px;
   background-repeat: no-repeat;
@@ -343,6 +338,7 @@ input {
 .collectionBanner h1 {
 	color: #ffffff;
 	padding-top: 200px;
+	margin-top: 0px;
 	text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
 	-webkit-text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 	-moz-text-shadow:0 2px 5px rgba(0, 0, 0, 0.5);
