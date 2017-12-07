@@ -14,7 +14,7 @@ assets/checkout.css.liquid:
 assets/layout-changes.css:
   development: 2017-09-11T00:39:02+01:00   d0b60b9a9f6f1974ab3e1e35477e3ccc
 layout/theme.liquid:
-  development: 2017-09-29T05:34:56+01:00   c6193e4f4bd99d540d22712e5a150dea
+  development: 2017-12-07T23:47:27+00:00   adbf42c9b93cf4df28eda7bff1caadb6
 snippets/_navbar-top.liquid:
   development: 2017-09-29T03:17:16+01:00   7af917da3a91472b63e200fddb708945
 snippets/collection-header.liquid:
