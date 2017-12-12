@@ -1,0 +1,28 @@
+<div class="utility" id="utility-exit">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <div id="exitModalContent" class="popUp">
+                  <div class="popUp-image-container">
+                    <img class="popUp-image" src="//cdn.shopify.com/s/files/1/1223/7364/files/Christmas-square.jpg?17690668286809076860" alt="Christmas Cheer">
+                  </div>
+                  <h4>Excited for the festive Season?</h4>
+                  <p>We've got you covered with some sweet gifts for those Outdoor loving friends and family.</p>
+                  <p>Don't forget to order before the 20th of December to get your all important gifts in time for Christmas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+      setTimeout(function() {
+        var seenItYet = Cookies.get('exitModal');
+        var useExitModal = 'true';
+        if (seenItYet !== 'seenIt' && !$.featherlight.current()) {
+          $.featherlight($('#exitModalContent'));
+          Cookies.set('exitModal', 'seenIt', {
+        expires: 1 // See the modal once per 24 hours.
+          });
+        }
+      }, 5000);
+</script>

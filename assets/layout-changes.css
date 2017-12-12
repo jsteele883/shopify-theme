@@ -649,3 +649,24 @@ input {
 ::-moz-selection {
   background: #CCDBDC;
 }
+
+.utility {
+	display: none;
+}
+
+.popUp {
+	text-align: center;
+	padding: 5%;
+}
+
+.featherlight-content {
+	border-radius: 10px;
+	margin: 10px;
+	font-weight: 300;
+}
+
+.popUp-image {
+	border-radius: 100%;
+	margin: 0 auto;
+	max-width: 200px;
+}
