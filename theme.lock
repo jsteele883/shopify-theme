@@ -12,9 +12,9 @@ assets/_wufoo.scss.liquid:
 assets/checkout.css.liquid:
   development: 2017-09-29T06:05:51+01:00   cae78f424397461af05b2062208f7e77
 assets/layout-changes.css:
-  development: 2017-09-11T00:39:02+01:00   d0b60b9a9f6f1974ab3e1e35477e3ccc
+  development: 2017-12-17T01:56:21+00:00   04584b9089773c959dcc799eb3062719
 layout/theme.liquid:
-  development: 2017-12-07T23:47:27+00:00   adbf42c9b93cf4df28eda7bff1caadb6
+  development: 2017-12-12T01:29:12+00:00   417d51317ea2a36f90aadb6e9d5a1fde
 snippets/_navbar-top.liquid:
   development: 2017-09-29T03:17:16+01:00   7af917da3a91472b63e200fddb708945
 snippets/collection-header.liquid:
@@ -23,9 +23,13 @@ snippets/collections-list.liquid:
   development: 2017-09-29T05:38:47+01:00   81d5e60336fb5972ac8177b7419d062e
 snippets/footer.liquid:
   development: 2017-09-29T05:39:18+01:00   a31dc9a46101b659f18e7fe296149273
+snippets/pop-up.liquid:
+  development: 2017-12-12T02:27:26+00:00   982505dba87845a3c65fc4cada9b6b5a
 snippets/search-form.liquid:
   development: 2017-09-27T01:58:18+01:00   7beb28b6f8f1c789ab4080303384ef20
 snippets/social-feed-instagram.liquid:
   development: 2017-09-29T05:39:29+01:00   55b510653515062eb39c4b7c20af0496
 templates/index.liquid:
   development: 2017-09-29T03:15:36+01:00   d835a6dcfd8e2ed1ff165b058a8fcd5e
+templates/page.gift-ideas.liquid:
+  development: 2017-12-17T01:52:34+00:00   09b294ae36c845bed4672df876414d50
