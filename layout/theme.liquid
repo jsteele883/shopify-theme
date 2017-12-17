@@ -78,7 +78,9 @@
   		{% endif %}
       </div>
       {% include 'footer' %}
+      {% if template == 'index' %}
       {% include 'pop-up' %}
+      {% endif %}
     </div>
 
     {% include 'option-select-callback' %}
